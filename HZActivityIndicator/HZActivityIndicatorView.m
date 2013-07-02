@@ -185,7 +185,7 @@
 
 - (void)setSteps:(NSUInteger)steps
 {
-    _anglePerStep = (360/steps) * M_PI / 180;
+    _anglePerStep = (360. / (CGFloat)steps) * M_PI / 180.;
     _steps = steps;
     [self setNeedsDisplay];
 }
