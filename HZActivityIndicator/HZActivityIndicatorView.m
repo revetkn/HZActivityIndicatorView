@@ -227,10 +227,10 @@
     UIBezierPath *bezierPath = [self finPathWithRect:finRect];
 
     CGPathRef bezierPathRef = CGPathCreateCopy([bezierPath CGPath]);    
-  
-    for (int i = 0; i < _steps; i++) 
+
+    for (int i = 0; i < _steps; i++)
     {
-        [[self _colorForStep:_currStep+i*_direction] set];
+        [[self _colorForStep:i*_direction] set];
                         
         CGContextBeginPath(context);
         CGContextAddPath(context, bezierPathRef);
